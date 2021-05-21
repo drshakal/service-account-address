@@ -23,10 +23,10 @@
         <restConfiguration bindingMode="json" component="jetty"
             host="0.0.0.0" port="8443"/>
         <rest id="rest" path="/api/account-address">
-            <get id="rest-id"
+            <post id="post-id"
                 outType="org.mycompany.models.AccountAddressType" uri="/id/{id}">
                 <to uri="direct:accountAddress"/>
-            </get>
+            </post>
         </rest>
         <route id="accountAddress">
             <from id="_form1" uri="direct:accountAddress"/>
